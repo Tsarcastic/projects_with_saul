@@ -1,2 +1,2 @@
 # projects_with_saul
-projects. with. Saul.
+A collection of projects Brendan Davis and Saul Pwanson collaborated on.
