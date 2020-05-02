@@ -5,6 +5,5 @@ Gamelist_item:
     children:
         link:
             css: a
-            xpath: ""
             multiple: true
             type: Link
