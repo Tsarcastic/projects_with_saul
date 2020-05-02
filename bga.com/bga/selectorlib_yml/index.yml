@@ -1,0 +1,10 @@
+Gamelist_item:
+    css: div.gamelist_item
+    multiple: true
+    type: Text
+    children:
+        link:
+            css: a
+            xpath: ""
+            multiple: true
+            type: Link
