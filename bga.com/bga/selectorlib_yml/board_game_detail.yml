@@ -1,17 +1,23 @@
+name:
+    css: div.gamename
+    type: Text
 designer:
     css: 'div.col-md-4 div.row-data:nth-of-type(1) div.row-value'
     type: Text
 artist:
     css: 'div.col-md-4 div.row-data:nth-of-type(2) div.row-value'
     type: Text
-published:
+publisher/editor:
     css: 'div.col-md-4 div.row-value > a'
     type: Text
 developed_by:
     css: 'div.col-md-4 div.row-data:nth-of-type(5) div.row-value'
     type: Text
 num_of_games_played:
-    css: 'div.col-md-5 div.row-data:nth-of-type(2) div.row-value'
+    css: 'div.col-md-5 a'
+    type: Text
+num_of_games_played:
+    css: 'div.col-md-5 a'
     type: Text
 complexity:
     css: 'div.col-md-5 div.row-data:nth-of-type(4) div.row-value'
@@ -34,3 +40,5 @@ release:
 year:
     css: 'div.col-md-4 div.row-data:nth-of-type(4) div.row-value'
     type: Text
+
+
