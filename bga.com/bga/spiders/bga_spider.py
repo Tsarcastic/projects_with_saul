@@ -3,7 +3,7 @@ import scrapy
 import os
 import selectorlib
 
-opened_file = open(os.path.join(os.path.dirname(__file__), '../selectorlib_yml/test_tags.txt') , 'r')
+opened_file = open(os.path.join(os.path.dirname(__file__), '../selectorlib_yml/gametags.txt') , 'r')
 gametags = opened_file.read()
 opened_file.close()
 big_string = ''.join(gametags)
