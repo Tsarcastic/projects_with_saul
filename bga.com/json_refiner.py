@@ -1,9 +1,13 @@
 import json
 
-data = []
-for line in open("test.json", 'r'):
-    data.append(json.loads(line))
+#data = []
+#for line in open("test.json", 'r'):
+    #data.append(json.loads(line))
 
+#data = [json.loads(line) for line in open("test.json", "r")]
+
+with open("test.json", "r") as f:
+    data = json.loads(f.read())
 
 #test = {"name": "Race for the Galaxy", "designer": "Tom Lehmann", "artist": "Claus Stephan & Martin Hoffmann", "publisher/editor": "Rio Grande Games", "developed_by": "Board Game Arena, Galehar ( galehar )", "num_of_games_played": "7 259 579", "complexity": "4", "strategy": "3", "luck": "2", "interaction": "1", "available_since": "11 / 30 / 2010", "release": "200214-1053", "year": "2007"},
 

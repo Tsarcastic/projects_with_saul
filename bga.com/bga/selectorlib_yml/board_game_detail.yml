@@ -37,6 +37,25 @@ available_since:
 release:
     css: 'div.row-data:nth-of-type(9) div.row-value'
     type: Text
+    num_of_players:
+    css: 'div.col-md-5 div.row-data:nth-of-type(2) div.row-value'
+    type: Text
+duration:
+    css: 'div.col-md-5 div.row-data:nth-of-type(3) div.row-value'
+    type: Text
+rules_links:
+    css: 'div.howtoplay_block a'
+    multiple: true
+    type: Link
+extended_links_text:
+    css: 'div.link_link > a'
+    multiple: true
+    type: Text
+extended_links:
+    css: 'div.link_link > a'
+    multiple: true
+    type: Link
+
 
 
 

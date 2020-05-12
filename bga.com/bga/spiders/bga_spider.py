@@ -45,5 +45,4 @@ class BgaSpider(scrapy.Spider):
         #data = self.detail_page_extractor.extract(response.text)
         yield data
 
-"""div#gamecategory_wrap_all.pagesection div.gamelist_itemrow_inner
-div#gamelist_itemrow_inner_all div."""
+
