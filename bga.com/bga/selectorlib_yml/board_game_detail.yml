@@ -10,11 +10,11 @@ artist:
 publisher/editor:
     css: 'div.col-md-4 div.row-value > a'
     type: Text
+year released:
+    css: 'div.col-md-4 div.row-data:nth-of-type(4) div.row-value'
+    type: Text
 developed_by:
     css: 'div.col-md-4 div.row-data:nth-of-type(5) div.row-value'
-    type: Text
-num_of_games_played:
-    css: 'div.col-md-5 a'
     type: Text
 num_of_games_played:
     css: 'div.col-md-5 a'
@@ -37,8 +37,6 @@ available_since:
 release:
     css: 'div.row-data:nth-of-type(9) div.row-value'
     type: Text
-year:
-    css: 'div.col-md-4 div.row-data:nth-of-type(4) div.row-value'
-    type: Text
+
 
 
