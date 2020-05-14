@@ -2,7 +2,7 @@ import json
 import jsonlines
 
 
-with open("test.json", "r") as f:
+with open("full_bga.json", "r") as f:
     data = json.loads(f.read())
 
 
@@ -24,34 +24,44 @@ def json_refiner(z):
 
 
             elif x in ["complexity", "strategy", "luck", "interaction", "year_released"]:
-                refined_game[x] = int(game[x])
+                if len(game[x]) == 0:
+                    refined_game[x] = None
+                else:
+                    refined_game[x] = int(game[x])
 
             elif x == "available_since":
                 vari = game[x][-4:] + "-" + game[x][0:2] + "-" + game[x][5:7]
                 refined_game[x] = vari
 
             elif x == "num_of_players":
-                if len(x) == 1:
-                    refined_game["min_players"] = x
-                    refined_game["max_players"] = x
+                if len(game[x]) == 1:
+                    refined_game["min_players"] = int(game["num_of_players"])
+                    refined_game["max_players"] = int(game["num_of_players"])
+                elif len(game[x]) >= 6:
+                    if game[x][-2].isdigit():
+                        refined_game["min_players"] = int(game["num_of_players"][0])
+                        refined_game["max_players"] = int(game["num_of_players"][-2:])
+                    else:
+                        refined_game["min_players"] = int(game["num_of_players"][0])
+                        refined_game["max_players"] = int(game["num_of_players"][-1])
+
                 else:
                     refined_game["min_players"] = int(game["num_of_players"][0])
                     refined_game["max_players"] = int(game["num_of_players"][-1])
 
-            elif x == "extended_links_text":
+            else:
+                refined_game[x] = game[x]
+
+            """elif x == "extended_links_text":
                 refined_game["extended_links"] = {}
                 for y in x:
                     position = 0
                     key = x[position]
                     value = game["extended_links"][position]
                     refined_game["extended_links"][key] = game[value]
-                    position += 1
+                    position += 1"""
 
-            elif x == "extended_links":
-                pass
 
-            else:
-                refined_game[x] = game[x]
 
         yield refined_game
 
