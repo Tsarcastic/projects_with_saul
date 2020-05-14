@@ -20,7 +20,7 @@ for x in game_list:
 
 
 class BgaSpider(scrapy.Spider):
-    name = 'bga_crawler'
+    name = 'bga_spider'
     allowed_domains = ['boardgamearena.com']
     start_urls = urls
 

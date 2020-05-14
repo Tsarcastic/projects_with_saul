@@ -1,6 +1,9 @@
 name:
     css: div.gamename
     type: Text
+description:
+    css: 'p#game_description_text'
+    type: Text
 designer:
     css: 'div.col-md-4 div.row-data:nth-of-type(1) div.row-value'
     type: Text
@@ -37,7 +40,7 @@ available_since:
 release:
     css: 'div.row-data:nth-of-type(9) div.row-value'
     type: Text
-    num_of_players:
+num_of_players:
     css: 'div.col-md-5 div.row-data:nth-of-type(2) div.row-value'
     type: Text
 duration:
