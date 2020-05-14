@@ -52,17 +52,6 @@ def json_refiner(z):
             else:
                 refined_game[x] = game[x]
 
-            """elif x == "extended_links_text":
-                refined_game["extended_links"] = {}
-                for y in x:
-                    position = 0
-                    key = x[position]
-                    value = game["extended_links"][position]
-                    refined_game["extended_links"][key] = game[value]
-                    position += 1"""
-
-
-
         yield refined_game
 
 
